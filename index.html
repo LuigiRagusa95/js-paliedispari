@@ -31,7 +31,11 @@
                 display: flex;
                 padding: 1rem;
                 color: #373e47;
-                align-items: center;
+                flex-direction: column;
+            }
+
+            section > * {
+                margin: 0.25rem;
             }
 
             section > label {
@@ -60,6 +64,7 @@
                 cursor: pointer;
                 color: #ffffff;
                 appearance: none;
+                width: fit-content;
                 font-size: 0.875rem;
                 line-height: 1.5rem;
                 border-radius: 0.125rem;
@@ -70,11 +75,21 @@
     </head>
     <body>
         <section>
+            <h1>Palindrome</h1>
             <label for="p-001">
-                <span>Inserisci una parola</span>
+                <span>Insert a word</span>
                 <input type="text" name="p-001" id="p-001" />
             </label>
             <button id="b-001">Check!</button>
+        </section>
+        <hr />
+        <section>
+            <h1>Even or Odd</h1>
+            <label for="p-002">
+                <span>Insert a number</span>
+                <input type="text" name="p-002" id="p-002" />
+            </label>
+            <button id="b-002">Go!</button>
         </section>
     </body>
 </html>

@@ -38,3 +38,30 @@ buttonPalindrome.addEventListener('click', () => {
 
 const inputOddOrEven = document.getElementById('p-002');
 const buttonOddOrEven = document.getElementById('b-002');
+
+const generateNumber = function () {
+    return Math.floor(Math.random() * 5) + 1;
+};
+
+const sumChecker = function (first, second) {
+    return (first + second) % 2 === 0 ? true : false;
+};
+
+buttonOddOrEven.addEventListener('click', () => {
+    if (isNaN(inputOddOrEven.value)) {
+        alert('Only number is allowed');
+        inputOddOrEven.value = '';
+        return;
+    } else {
+        const AI = generateNumber();
+        const US = parseInt(inputOddOrEven.value);
+        inputOddOrEven.value = '';
+        console.table([
+            ['Your number', US],
+            ['Your opponent number', AI],
+            ['The sum', US + AI],
+        ]);
+        if (sumChecker(US, AI)) alert('The sum of the numbers is EVEN');
+        else alert('The sum of the numbers is ODD');
+    }
+});
