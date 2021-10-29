@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>js-paliedispari</title>
+        <script src="./js/main.js" defer></script>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <style>
+            *,
+            *::before,
+            *::after {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            html,
+            body {
+                width: 100%;
+                height: 100%;
+            }
+
+            body {
+                display: flex;
+                flex-direction: column;
+                font-family: sans-serif;
+            }
+
+            section {
+                display: flex;
+                padding: 1rem;
+                color: #373e47;
+                align-items: center;
+            }
+
+            section > label {
+                display: flex;
+                align-items: center;
+            }
+
+            section > label > * {
+                margin-right: 0.5rem;
+            }
+
+            section input {
+                padding: 0.25rem;
+                color: #373e47;
+                border-radius: 0.125rem;
+                border: 1px solid #373e47;
+            }
+
+            section input:focus {
+                outline: none;
+                box-shadow: 0 0 0 2px #f69d50;
+            }
+
+            section button {
+                border: none;
+                cursor: pointer;
+                color: #373e47;
+                appearance: none;
+                font-size: 0.875rem;
+                line-height: 1.5rem;
+                border-radius: 0.125rem;
+                padding: 0.25rem 0.875rem;
+                background-color: #f69d50;
+            }
+        </style>
+    </head>
+    <body>
+        <section>
+            <label for="p-001">
+                <span>Inserisci una parola</span>
+                <input type="text" name="p-001" id="p-001" />
+            </label>
+            <button>Check!</button>
+        </section>
+    </body>
+</html>
