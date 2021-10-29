@@ -47,21 +47,18 @@ const sumChecker = function (first, second) {
     return (first + second) % 2 === 0 ? true : false;
 };
 
+//prettier-ignore
+const numberCheck = (number) => (!isNaN(number) && (parseInt(number) <= 5 && parseInt(number) > 0)) ? true : false;
+
+const clear = (input) => (input.value = '');
+
 buttonOddOrEven.addEventListener('click', () => {
-    if (isNaN(inputOddOrEven.value)) {
-        alert('Only number is allowed');
-        inputOddOrEven.value = '';
-        return;
-    } else {
+    if (numberCheck(inputOddOrEven.value)) {
         const AI = generateNumber();
         const US = parseInt(inputOddOrEven.value);
-        inputOddOrEven.value = '';
-        console.table([
-            ['Your number', US],
-            ['Your opponent number', AI],
-            ['The sum', US + AI],
-        ]);
         if (sumChecker(US, AI)) alert('The sum of the numbers is EVEN');
         else alert('The sum of the numbers is ODD');
-    }
+    } else alert('Insert a value between 0 and 5');
+
+    clear(inputOddOrEven);
 });
